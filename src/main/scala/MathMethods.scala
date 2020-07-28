@@ -12,6 +12,7 @@ object MathMethods extends  App {
 
     // no need for return keyword
     a * b // the last evaluated expression value returned
+
   }
 
   // block with return keyword

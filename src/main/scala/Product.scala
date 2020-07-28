@@ -12,7 +12,6 @@ class Product {
   // protected, this class and child classes
   private var _price: Int = _; // here underscore represent 0
 
-
   // JAVA: getPrice() { return this._price;}
   // JAVA: setPRice(int value) { this._price = price}
 
