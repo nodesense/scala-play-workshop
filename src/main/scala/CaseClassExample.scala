@@ -7,7 +7,7 @@
 // productCode, stock are both member variable of type val, public access speicifier
 // Scala lang automatically generate Companion object for case class
 // immutable
-case class Inventory(productCode: Int, stock: Int);
+case class Inventory(productCode: Int, stock: Int)
 
 object CaseClassExample extends  App {
    // Works, not recommended, new keyword

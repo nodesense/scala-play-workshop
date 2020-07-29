@@ -23,7 +23,7 @@ object HigherOrderFunctionExample extends  App {
   // function body calls the f (n)
   val doWhatISay: (Int => Int, Int) => Int = (f, n) => f(n)
 
-  def doWhatISay2 (f: Function1[Int, Int], n: Int) = f(n)
+  def doWhatISay2 (f: Function1[Int, Int], n: Int): Int = f(n)
 
 
   //  return  id(100)

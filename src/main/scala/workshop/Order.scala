@@ -19,7 +19,10 @@ object Order {
   
   // unapply, reverse of apply
   // extraction of member
+  // declaration
   // usage: val Order(id) = o2;
+  // declare a value type id = o2.id
+  // val id = o2.id
   def unapply(arg: Order): Option[Int] = {
     println("Unapply called");
     Some(arg.id)

@@ -38,7 +38,25 @@ object OptionsExample extends  App {
 
   println("results ", results);
 
+  def getSome(option: Option[Int]): Option[Int] = {
+    println("Get some called")
+    option
+  }
 
+  val v = for { value <- toInt("10")} yield value;
+  println("V is ", v)
+
+  val x = for {
+                value <- toInt("IN")
+                k <-  getSome(Some(value))
+                } yield k;
+
+  val pairs = for { i <- 1 to 10} yield (i , i + 1)
+
+  println("Pairs", pairs)
+
+
+  println("X is ", x)
   // what if we call same in 1000 places
 
 }

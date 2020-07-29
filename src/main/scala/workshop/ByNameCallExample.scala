@@ -7,16 +7,19 @@ object ByNameCallExample  extends  App {
     System.nanoTime()
   }
 
+  // by value
   def timenow(t: Long) = {
     println("Time now called")
     println("T ", t)
   }
 
   // by name parameter/block
+  // t is a code block, that returns Long value
+  // t => nano ()
   def delayed(t: => Long ) = {
     println("Delayed called")
-    println("T ", t)
-    println("T2 ", t)
+    println("T ", t) // executing code block
+    println("T2 ", t) // executing code block
     println("-----------")
   }
 
@@ -37,18 +40,16 @@ object ByNameCallExample  extends  App {
   timenow ( nano() ) // normal function
   println("--------------------")
 
+  // nano() was not called
   // nano() is passed as a block of code, not yet evaluated
-  // it will be evaluated inside nano() func
+  // it will be evaluated inside delayed() func
   delayed( nano() ) // by-name block
 
   // Boolean
   // if (true/false) {.....} else {...}
 
   // p => true
-  ifElseExpr ( {
-    println("True predicate")
-    true
-  },
+  ifElseExpr ( true, // true still pass as code block
     {
       println("condition true")
     },

@@ -46,4 +46,37 @@ Controller
                         Failure 
                                 DB Error - throwable
                                 
-12: 20 PM
+
+--
+
+OS - Fundamentals
+  Process - set of instruction loaded into memory
+      Thread - Executing the instruction
+      
+OS - Multi processing
+     Each process   
+                multiple threads
+                at least 1 thread is required - Main/App/Primary Thread
+                
+     Thread shall have a context
+                    variables - thread local variable
+                    
+     Context-Switch
+        Give space to one thread, while keeping others in idle
+           
+SCALA
+    Supports thread, -- Java Thread --> JVM Thread
+    Package - concurrent - Future, etc
+        Collections  - immutable collection, thread safe
+        
+        
+Threading
+    1 primary thread 
+    N - worker threads
+        -- dedicated
+        -- pool [reserved threads]
+            pull one from pool on need basics
+            use it
+            release to pool
+            
+    Shared object - risky, lock, prevneting other thread to interfere

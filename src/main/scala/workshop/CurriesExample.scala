@@ -39,11 +39,12 @@ object  CurriesExample extends  App {
   // Closure -- Functional state, encapsulation
 
   // sequence generator example
-  // seq1by2 = 0, 2, 4, 6, ...
+  // seq0by2 = 0, 2, 4, 6, ...
   // seq100by20 = 100, 120, 140, 140, ...
 
   // this function return another function of type () => Int
   def seq (seed: Int, step: Int = 1): () => Int = {
+    // local state, encapsualed
     var counter = seed
 
     //0, 1, 2, 3, ..
@@ -75,4 +76,9 @@ object  CurriesExample extends  App {
   println("seq100by20", seq100by20()) // 160
   println("seq0by1", seq0by1()) // 4
   println("seq100by20", seq100by20()) // 180
+
+  // seq100by20 has one current value
+  // seq0by1 has one current value, it will be release when seq0by1 is garbage collected
+
+
 }

@@ -39,6 +39,8 @@ object CaseMatchExample extends App  {
     case _ => 0
   }
 
+
+
   def getDiscount(product: Object): Int = product match  {
     case l: Light => 10
     // guarded case statement, with if statement
@@ -54,4 +56,7 @@ object CaseMatchExample extends App  {
   println("Other types ", getDiscount("Unknown"))
 
 
+  case class PhoneExt(name: String, ext: Int)
+  val extensions = List(PhoneExt("steve", 100), PhoneExt("robey", 200))
+  println(extensions.filter { case PhoneExt(name, extension) => extension < 200 })
 }
